@@ -8,17 +8,6 @@ body {
   box-sizing: border-box;
 }
 /* Popup & overlay */
-#overlay {
-  position: absolute;
-  z-index: 9999999;
-  background-color: var(--text-black);
-  opacity: .4;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-}
 #popup {
   position: absolute;
   margin: auto;
@@ -428,9 +417,9 @@ th img {
 /* Map */
 #mapDiv {
   position: absolute;
-  left: 338px;
+  left: 0px;
   height: 100%;
-  width: calc(100% - 338px);
+  width: 100%;
   top: 0px;
   box-sizing: border-box;
 }
@@ -469,13 +458,12 @@ th img {
 /* Search box */
 #search-box {
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 -1px 0px rgb(0 0 0 / 2%);
-  height: 48px;
-  width: 350px;
+  height: 50px;
+  width: 30%;
   font-size: 15px;
   border-radius: 5px;
   position: absolute;
-  left: calc(calc(100% - 338px) / 2);
-  transform: translateX(calc(-50% + 338px));
+  left: 20px;
   top: 15px;
   box-sizing: border-box;
   z-index: 9999;
@@ -500,11 +488,10 @@ th img {
   font-weight: 500;
 }
 #search-box img {
-  position: absolute;
+  left: 100px;
   z-index: 99999;
-  right: 15px;
-  top: 12px;
-  width: 20px;
+  top: 15px;
+  width: 48px;
 }
 ::placeholder {
   color: #A1AAAF;
@@ -512,9 +499,9 @@ th img {
 /* Drawing tools */
 #drawing-controls {
   position: absolute;
-  left: calc(calc(100% - 338px) / 2);
-  transform: translateX(calc(-50% + 338px));
-  height: 48px;
+  left: 50%;
+  transform: translateX(calc(-50%));
+  height: 50px;
   background-color: #FFF;
   border-radius: 5px;
   bottom: 11px;
@@ -527,12 +514,12 @@ th img {
 .tool {
   vertical-align: middle;
   display: inline-block;
-  margin-top: 12px;
+  margin-top: 15px;
   margin-right: 15px;
 }
 .tool img {
   opacity: .4;
-  width: 23px;
+  width: 25px;
   transition: opacity .1s cubic-bezier(.05,.03,.35,1);
 }
 .tool img:hover {
@@ -658,7 +645,7 @@ th img {
   vertical-align: middle;
 }
 #share-button {
-  height: 48px;
+  height: 5%;
   padding-left: 20px;
   padding-right: 20px;
   color: #FFF;
@@ -672,10 +659,53 @@ th img {
   vertical-align: middle;
   font-size: 14px;
 }
+#geojson {
+  height: 5%;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #FFF;
+  background: black;
+  text-align: center;
+  line-height: 48px;
+  border-radius: 5px;
+  display: inline-block;
+  font-family: Inter;
+  font-weight: 700;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+#logout {
+  height: 5%;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #FFF;
+  background: black;
+  text-align: center;
+  line-height: 48px;
+  border-radius: 5px;
+  display: inline-block;
+  font-family: Inter;
+  font-weight: 700;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
 #share-button:hover {
   cursor: pointer;
   opacity: .6;
 }
+
+#geojson:hover {
+  cursor: pointer;
+  opacity: .6;
+}
+
+#logout:hover {
+  cursor: pointer;
+  opacity: .6;
+}
+
 #profile {
   width: 35px;
   height: 35px;
